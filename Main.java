@@ -11,6 +11,5 @@ public class Main {
         for (int i = 0; i <smartArray.size() ; i++) {
             System.out.println(smartArray.get(i));
         }
-
     }
 }
