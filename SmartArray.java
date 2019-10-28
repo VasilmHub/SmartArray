@@ -45,12 +45,30 @@ public class SmartArray {
         }
         this.date[size - 1] = 0;
     }
-    public void replace(int index1, int index2){
+
+    public StringBuilder joinBy(String connection) {
+        StringBuilder str = new StringBuilder();
+        for (int i = 0; i < this.size; i++) {
+            str.append(this.date[i]);
+            if (i != this.size - 1) {
+                str.append(connection);
+            }
+        }
+        return str;
+    }
+
+    public void printAll() {
+        for (int i = 0; i < this.size; i++) {
+            System.out.println(this.date[i]);
+        }
+    }
+
+    public void replace(int index1, int index2) {
         CheckIndex(index1);
         CheckIndex(index2);
-        int temp=this.date[index1];
-        this.date[index1]=this.date[index2];
-        this.date[index2]=temp;
+        int temp = this.date[index1];
+        this.date[index1] = this.date[index2];
+        this.date[index2] = temp;
     }
 
     public void add(int number) {
